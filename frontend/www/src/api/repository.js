@@ -11,7 +11,7 @@ export default {
     },
     
     logout() {
-        return api.delete('http://127.0.0.1:8000/api/login');
+        return api.delete('http://127.0.0.1:8000/api/logout');
     },
 
 
