@@ -9,6 +9,7 @@
         <nav class="flex gap-x-4">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/sign-in">Sign In</RouterLink>
         </nav>
       </div>
     </header>
