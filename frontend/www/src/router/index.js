@@ -24,7 +24,12 @@ const router = createRouter({
       name: 'sign-in',
       component: () => import('../views/LoginView.vue'),
       beforeEnter: middleware.guest,
-    }
+    },
+    {
+      path: '/job-post',
+      name: 'job-post',
+      component: () => import('../views/JobPostView.vue'),
+    },
   ]
 })
 

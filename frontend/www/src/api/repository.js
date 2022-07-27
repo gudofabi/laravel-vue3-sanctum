@@ -14,5 +14,12 @@ export default {
         return api.delete('http://127.0.0.1:8000/api/logout');
     },
 
+    jobGet() {
+        return api.get('http://127.0.0.1:8000/api/job-post');
+    },
+
+    paginateJob(page) {
+        return api.get(`http://127.0.0.1:8000/api/job-post?page=${page}`);
+    }
 
 }

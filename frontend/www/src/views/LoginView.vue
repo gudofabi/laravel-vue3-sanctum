@@ -4,7 +4,7 @@
         <h1 class="text-xl">Login</h1>
         <input type="email" name="email" v-model="form.email" id="email" placeholder="Email">
         <input type="password" name="password" v-model="form.password" id="password" placeholder="Password">
-        <button @click="func_login">Submit</button>
+        <button @click="func_login">{{ loading ? 'Loading...' : 'Sign In' }}</button>
     </div>
   </div>
 </template>

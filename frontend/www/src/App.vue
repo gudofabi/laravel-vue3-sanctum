@@ -8,6 +8,7 @@
 
         <nav class="flex gap-x-4">
           <RouterLink v-show="comp_authenticated" to="/">Home</RouterLink>
+          <RouterLink to="/job-post">Job Post</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink v-show="!comp_authenticated" to="/sign-in">Sign In</RouterLink>
           <a class="cursor-pointer" v-show="comp_authenticated" @click="func_logout">Logout</a>

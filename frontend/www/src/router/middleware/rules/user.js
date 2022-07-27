@@ -7,6 +7,6 @@ export default (to, from, next) => {
     if(user.authenticated) {
         next();
     }else {
-        next({ name: 'login' })
+        next({ name: 'sign-in' })
     }
 }
