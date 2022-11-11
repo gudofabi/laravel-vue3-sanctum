@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\JobPostController;
+use App\Http\Controllers\Blog\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::delete('/logout', [AuthController::class, 'logout']);
 Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 Route::apiResource('job-post', JobPostController::class);
+Route::apiResource('blogs', BlogController::class);
