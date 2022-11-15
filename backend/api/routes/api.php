@@ -22,5 +22,5 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::delete('/logout', [AuthController::class, 'logout']);
 Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
-Route::apiResource('job-post', JobPostController::class);
+Route::apiResource('job-post', JobPostController::class)->middleware('auth:sanctum');
 Route::apiResource('blogs', BlogController::class);

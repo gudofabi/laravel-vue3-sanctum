@@ -15,15 +15,16 @@ export const useAuthStore = defineStore({
         async login(params) {
             await repository.createSession();
             const { data } = await repository.login(params);
-            // console.log(data);
             this.user = data.user;
             sessionStorage.user = JSON.stringify(data.user)
+            sessionStorage.access_token = data.access_token
         },
 
         async logout() {
             await repository.logout();
             this.user = null;
             sessionStorage.removeItem('user');
+            sessionStorage.removeItem('access_token');
         }
     },
     

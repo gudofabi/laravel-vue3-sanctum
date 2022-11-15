@@ -7,6 +7,7 @@ let instance = axios.create({
 instance.interceptors.request.use(request => {
     request.headers.common['Accept'] = 'application/json';
     request.headers.common['Content-Type'] = 'application/json';
+    request.headers['Authorization'] = `Bearer ${sessionStorage.getItem('access_token')}`;
     return request;
 })
 

@@ -29,6 +29,7 @@ const router = createRouter({
       path: '/job-post',
       name: 'job-post',
       component: () => import('../views/JobPostView.vue'),
+      beforeEnter: middleware.user,
     },
   ]
 })
