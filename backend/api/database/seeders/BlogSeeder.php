@@ -4,19 +4,17 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Blog;
 
-class DatabaseSeeder extends Seeder
+class BlogSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call([
-            JobPostSeeder::class,
-            BlogSeeder::class,
-        ]);
+        Blog::factory()->count(30)->create();
     }
 }
